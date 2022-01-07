@@ -1,8 +1,4 @@
 # Metricbeat 연동 (with docker compose)
-```
-OS      : Windows 10
-개발환경 : Docker 20.10.8, ELK 7.15.0
-```  
 
 [기존 ELK 서버](https://github.com/K-Shield-Jr/EDR/blob/main/%EC%A0%95%EB%A6%AC/1.%20%ED%99%98%EA%B2%BD%EA%B5%AC%EC%B6%95/2\)%20ELK%20%EC%84%9C%EB%B2%84.md)에서 설정 파일 수정으로 간단하게 metricbeat를 연동할 수 있다.  
 <br>
