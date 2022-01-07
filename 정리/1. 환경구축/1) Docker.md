@@ -1,11 +1,5 @@
 # Docker 설치
 
-```
-OS      : Windows 10
-개발환경 : Docker 20.10.8, ELK 7.15.0
-```
----
-
 도커 설치를 위해 [잘 정리된 글](https://www.lainyzine.com/ko/article/a-complete-guide-to-how-to-install-docker-desktop-on-windows-10/)을 참고하였다.  
 <br>
 
