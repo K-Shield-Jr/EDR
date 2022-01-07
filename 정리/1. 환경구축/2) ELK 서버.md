@@ -1,8 +1,4 @@
 # ELK 서버 구축 (with docker compose)
-```
-OS       : Windows 10
-개발환경  : Docker 20.10.8, ELK 7.15.0
-```
 
 ## 1. 사전 준비
 
