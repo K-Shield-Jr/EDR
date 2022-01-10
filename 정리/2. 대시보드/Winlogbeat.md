@@ -9,7 +9,14 @@
 ![image](https://user-images.githubusercontent.com/51702223/148655320-10e5dac3-d850-4c4a-bf46-0a9225a5801f.png)   
        
 <br><br>
-## 1. 악성코드 추적 대시보드   
+
+## 1. 통합 대시보드
+![image](https://user-images.githubusercontent.com/51702223/148719973-ca640628-88dd-4943-b831-d545484a389f.png)
+
+
+
+
+## 2. 악성코드 추적 대시보드   
 
 ### Image
 All Types 드롭박스 > Aggregation based > Data Table 선택
@@ -98,20 +105,16 @@ setValue 클릭하니 상단에 새 필터가 추가됨.<br> 레지스트리 오
 ![23](https://user-images.githubusercontent.com/59687167/139571330-656f129b-3dbc-4d17-98a1-f399ed9f1446.PNG)
 
 
+## TSVB(Time Series Visual Builder) 그래프
+###  TSVB 이용한 시간대 별 이벤트 개수 그래프
+All Types 드롭박스 > TSVB 선택
 
-## 3. 네트워크 관련 대시보드
-![24](https://user-images.githubusercontent.com/59687167/139571876-9a8d3d5b-5882-46f8-a263-c96fefc3df27.PNG)
-포트
-![26](https://user-images.githubusercontent.com/59687167/139571894-fe86c95e-805f-406e-8404-e7fca5a53f9a.PNG)
-프로토콜
-![27](https://user-images.githubusercontent.com/59687167/139571907-37a4da17-56e1-4668-9f37-ab7e1086e1a3.PNG)
-ip
-![28](https://user-images.githubusercontent.com/59687167/139571921-bad8c9c6-5a94-43b7-ad30-d852ffb4ba64.PNG)
-![29](https://user-images.githubusercontent.com/59687167/139571930-a447cf36-617d-4763-a52b-dbd2b47c7a34.PNG)
-dns
-
-![31](https://user-images.githubusercontent.com/59687167/139577098-27ba43da-5131-48c9-8a0d-d0fa54433032.PNG)
-TSVB를 이용해서 시간대 별 이벤트 개수 그래프
+그래프 하단에서 Data를 설정하면 시간에 따른 Event를 그래프로 볼 수 있다.<br> 
+- Aggregation : count<br>
+- Group by : Terms
+- By : winlog.event_id.keyword
+- Size: 27 
+![image](https://user-images.githubusercontent.com/51702223/148717132-f2acb6c4-f2a5-4e23-9314-86028334cd31.png)
 
 ```
 이벤트 ID
@@ -137,6 +140,42 @@ TSVB를 이용해서 시간대 별 이벤트 개수 그래프
 21 : WmiEventConsumerToFilter 활동이 감지 됨
 255 : Sysmon 오류
 ```
+
+###  도착 IP(시간별)
+TSVB 그래프를 하나 더 생성한다. 하단에서 Data를 설정하면 시간에 따른 도착 IP를 볼 수 있다.<br> 
+- Aggregation : count<br>
+- Group by : Terms
+- By : winlog.event_data.DestinationIp.keyword
+- Size: 10
+![image](https://user-images.githubusercontent.com/51702223/148719389-91ee3a65-3033-4c6d-b48a-f59e2370de3b.png)
+
+
+###  소스 IP(시간별)
+TSVB 그래프를 하나 더 생성한다. 하단에서 Data를 설정하면 시간에 따른 소스 IP를 볼 수 있다.<br> \- Aggregation : count<br>
+- Aggregation : count<br>
+- Group by : Terms
+- By : winlog.event_data.SourceIp.keyword
+- Size: 10
+![image](https://user-images.githubusercontent.com/51702223/148719667-08bea647-d0ea-4dda-b9ef-dad739e74300.png)
+
+### 그래프 배치
+![image](https://user-images.githubusercontent.com/51702223/148719778-926164a0-b949-4ebd-b455-7d5062fda993.png)
+
+
+## 3. 네트워크 관련 대시보드
+![24](https://user-images.githubusercontent.com/59687167/139571876-9a8d3d5b-5882-46f8-a263-c96fefc3df27.PNG)
+포트
+![26](https://user-images.githubusercontent.com/59687167/139571894-fe86c95e-805f-406e-8404-e7fca5a53f9a.PNG)
+프로토콜
+![27](https://user-images.githubusercontent.com/59687167/139571907-37a4da17-56e1-4668-9f37-ab7e1086e1a3.PNG)
+ip
+![28](https://user-images.githubusercontent.com/59687167/139571921-bad8c9c6-5a94-43b7-ad30-d852ffb4ba64.PNG)
+![29](https://user-images.githubusercontent.com/59687167/139571930-a447cf36-617d-4763-a52b-dbd2b47c7a34.PNG)
+dns
+
+![31](https://user-images.githubusercontent.com/59687167/139577098-27ba43da-5131-48c9-8a0d-d0fa54433032.PNG)
+
+
 
 
 ## 4. 통합 
