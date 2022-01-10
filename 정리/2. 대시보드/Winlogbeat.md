@@ -18,35 +18,43 @@ All Types 드롭박스 > Aggregation based > Data Table 선택
 - Buckets: Split rows<br>
 - Aggregation: Terms<br>
 - Field: winlog.event_data.Image.Keyword<br>
-- Sizd: 15 
+- Size: 15 
 
 입력 후 Update 클릭 시 사진과 같은 표가 생성된다.<br>
 Save and Return 버튼을 누르면 현재 표 저장 후 이전 화면으로 돌아간다.
 <img width="694" alt="image만들기" src="https://user-images.githubusercontent.com/51702223/148655745-416023bf-c092-4b70-91e5-edef0d8ebfea.PNG">
 
-수정중
-
-![9](https://user-images.githubusercontent.com/59687167/139569337-3b2ea908-097b-4793-a718-d9026e4624bd.PNG)
+[No Title] 영역을 누르면 세부 이름 설정이 가능하다.<br>
+마우스 드래그를 통해 화면 배치 및 차트 크기를 조절 할 수 있다.<br>
+Save를 눌러 대시보드를 저장한다.<br>
+![image](https://user-images.githubusercontent.com/51702223/148707754-7ce455de-8581-47a9-ba0a-3169d8c376d6.png)
 ![10](https://user-images.githubusercontent.com/59687167/139569346-1eee608d-cc59-415b-ac56-1f425b79569d.PNG)
-대시보드에서도 저장을 해준다.
 
-![11](https://user-images.githubusercontent.com/59687167/139569541-663b1e97-3265-485a-8fbc-8a0562c3ce51.PNG)
-![12](https://user-images.githubusercontent.com/59687167/139569546-298ac207-5530-4bd4-8d3c-cd2d586d2356.PNG)
-동일한 방법으로 다른 필드도 생성시킨다.
+<br><br>
+방금 한 것과 동일한 방법으로 다른 필드도 생성시킨다.<br>
+발생한 이벤트 수를 확인할 수 있는 Pie차트를 만든다.<br>
+All Types 드롭박스 > Aggregation based > Pie 선택<br>
+- Buckets: Split slices<br>
+- Aggregation: Terms<br>
+- Field: winlog.event_Id.Keyword<br>
+- Size: 27 (27개의 이벤트 ID 이므로) https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon - 이벤트 id는 여기서 확인 가능
+
+다음과 같이 event id를 pie로 만들었다.
+![image](https://user-images.githubusercontent.com/51702223/148708087-7b3b7386-1ec3-41ed-84c0-bd924f423c57.png)
+
+
+
 
 ```
+Event_id : 발생한 모든 Event
 Image : 프로세스 이름
 Parentlmage : 부모 프로세스 이름
-CommandLine : 실행할 때 사용된 인자
+CommandLine : 프로세스 실행 시 입력한 인자
+EventType : 이벤트 종류
+ImageLoaded : 메모리에 로딩이 될 때 사용되는 이벤트
+TargetFilename : 프로세스가 생성한 파일 이름
+TargetObject : 프로세스가 생성한 레지스트리 오브젝트
 ```
-
-![14](https://user-images.githubusercontent.com/59687167/139569797-ef008528-f9dd-46bc-8c70-43b655ed2801.PNG)
-다음과 같이 event id를 pie로 만들었다.
-
-
-![15](https://user-images.githubusercontent.com/59687167/139569889-72488a11-573d-420a-ba8e-59d8abaed93d.PNG)
-(현재 27개의 이벤트 ID 이므로 23 -> 27개로 바꿔줌)
-https://docs.microsoft.com/en-us/sysinternals/downloads/sysmon - 이벤트 id는 여기서 확인 가능
 
 
 ![16](https://user-images.githubusercontent.com/59687167/139570050-13b75c35-e567-4f7a-92b9-3ad425407a3a.PNG)
