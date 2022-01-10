@@ -10,6 +10,8 @@
        
 <br><br>
 ## 1. 악성코드 추적 대시보드   
+
+### Image
 All Types 드롭박스 > Aggregation based > Data Table 선택
 ![image](https://user-images.githubusercontent.com/51702223/148655623-6224d4f0-6cba-4153-a98a-085db52c5316.png)   
   <br><br>    
@@ -30,8 +32,8 @@ Save를 눌러 대시보드를 저장한다.<br>
 ![image](https://user-images.githubusercontent.com/51702223/148707754-7ce455de-8581-47a9-ba0a-3169d8c376d6.png)
 ![10](https://user-images.githubusercontent.com/59687167/139569346-1eee608d-cc59-415b-ac56-1f425b79569d.PNG)
 
-<br><br>
-방금 한 것과 동일한 방법으로 다른 필드도 생성시킨다.<br>
+
+### Event_id
 발생한 이벤트 수를 확인할 수 있는 Pie차트를 만든다.<br>
 All Types 드롭박스 > Aggregation based > Pie 선택<br>
 - Buckets: Split slices<br>
@@ -44,6 +46,8 @@ All Types 드롭박스 > Aggregation based > Pie 선택<br>
 
 
 
+<br>
+동일한 방법으로 다른 필드도 생성시킨다.
 
 ```
 Event_id : 발생한 모든 Event
@@ -56,34 +60,46 @@ TargetFilename : 프로세스가 생성한 파일 이름
 TargetObject : 프로세스가 생성한 레지스트리 오브젝트
 ```
 
+### ParentImage
+![image](https://user-images.githubusercontent.com/51702223/148710654-61733430-52b6-4e55-b222-dc48fc5c5c6f.png)
 
-![16](https://user-images.githubusercontent.com/59687167/139570050-13b75c35-e567-4f7a-92b9-3ad425407a3a.PNG)
-Image loaded -> 프로세스에서 사용한 이미지가 메모리에 로딩이 될 때 사용되는 됨
+### CommandLine
+![image](https://user-images.githubusercontent.com/51702223/148711459-47997fd7-cb07-402c-9f73-d10633fdeb25.png)
 
-
-![17](https://user-images.githubusercontent.com/59687167/139570220-818eb350-0edf-422a-b97a-ba3539953e48.PNG)
-targetfilename -> 악성코드가 생성한 파일 이름
-
-
-
+### EventType
 ![18](https://user-images.githubusercontent.com/59687167/139570664-bfb1eb38-b7cf-45ec-8f53-ac0714d81953.PNG)
+
+### ImageLoaded
+![16](https://user-images.githubusercontent.com/59687167/139570050-13b75c35-e567-4f7a-92b9-3ad425407a3a.PNG)
+
+### TargetFilename
+![17](https://user-images.githubusercontent.com/59687167/139570220-818eb350-0edf-422a-b97a-ba3539953e48.PNG)
+
+### TargetObject
 ![19](https://user-images.githubusercontent.com/59687167/139570669-54dd3e2b-3f8c-413e-91f3-c53ed009add7.PNG)
-레지스트리 관련 부분
+
+### 완성
+![image](https://user-images.githubusercontent.com/51702223/148714486-0560d456-bce3-4e83-a8f2-35492185fd39.png)
+
+
+## 2. 레지스트리 확인 
+
 ```
 Event ID 12 : RegistryEvent (Object create and delete) -> 레지스트리 오브젝트가 생성 또는 제거 되었을 때 발생
 Event ID 13: RegistryEvent (Value Set) -> 레지스트리 값을 추가 했을 때 발생 (Set Value)
 Event ID 14: RegistryEvent (Key and Value Rename) -> 이름이 변경된 키, 값의 새 이름을 기록
 ```
 ![20](https://user-images.githubusercontent.com/59687167/139570761-81b5f40b-965f-4b4a-87c1-1dfb7f0dc02d.PNG)
-EventType 파이 차트를 클릭해서 확인 가능하다.
-![21](https://user-images.githubusercontent.com/59687167/139570913-7c2755c9-1be7-407c-b87f-82760db6e682.PNG)
-![22](https://user-images.githubusercontent.com/59687167/139570914-37d2e0f9-19d3-4f0e-be19-d884511c0e72.PNG)
-어떤 값을 추가 했는지 확인하는 법은
+<br><br>EventType 파이 차트를 클릭해서 확인 가능하다.<br>
+setValue 클릭하니 상단에 새 필터가 추가됨.<br> 레지스트리 오브젝트는 targetobject에 보인다.
+![image](https://user-images.githubusercontent.com/51702223/148714887-f9cb2118-5cc9-4215-9bed-945281dc3de9.png)
+
+어떤 값을 추가 했는지 확인하는 법은 Details에서 확인 가능(바이너리가 아닌 스트링일때 Details에서 확인 가능)
 ![23](https://user-images.githubusercontent.com/59687167/139571330-656f129b-3dbc-4d17-98a1-f399ed9f1446.PNG)
-Details에서 확인 가능(바이너리가 아닌 스트링일때 Details에서 확인 가능)
 
 
-네트워크 관련
+
+## 3. 네트워크 관련 대시보드
 ![24](https://user-images.githubusercontent.com/59687167/139571876-9a8d3d5b-5882-46f8-a263-c96fefc3df27.PNG)
 포트
 ![26](https://user-images.githubusercontent.com/59687167/139571894-fe86c95e-805f-406e-8404-e7fca5a53f9a.PNG)
@@ -122,3 +138,5 @@ TSVB를 이용해서 시간대 별 이벤트 개수 그래프
 255 : Sysmon 오류
 ```
 
+
+## 4. 통합 
