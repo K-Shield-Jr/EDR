@@ -1,4 +1,4 @@
 # 대시보드
 
-- [ ] Winlogbeat
+- [X] Winlogbeat
 - [ ] Metricbeat
