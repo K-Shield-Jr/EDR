@@ -10,13 +10,11 @@
        
 <br><br>
 
-## 1. 통합 대시보드
-![image](https://user-images.githubusercontent.com/51702223/148719973-ca640628-88dd-4943-b831-d545484a389f.png)
 
 
 
 
-## 2. 악성코드 추적 대시보드   
+## 1. 악성코드 추적 대시보드   
 
 ### Image
 All Types 드롭박스 > Aggregation based > Data Table 선택
@@ -89,7 +87,7 @@ TargetObject : 프로세스가 생성한 레지스트리 오브젝트
 ![image](https://user-images.githubusercontent.com/51702223/148714486-0560d456-bce3-4e83-a8f2-35492185fd39.png)
 
 
-## 2. 레지스트리 확인 
+## 레지스트리 확인 
 
 ```
 Event ID 12 : RegistryEvent (Object create and delete) -> 레지스트리 오브젝트가 생성 또는 제거 되었을 때 발생
@@ -105,7 +103,7 @@ setValue 클릭하니 상단에 새 필터가 추가됨.<br> 레지스트리 오
 ![23](https://user-images.githubusercontent.com/59687167/139571330-656f129b-3dbc-4d17-98a1-f399ed9f1446.PNG)
 
 
-## TSVB(Time Series Visual Builder) 그래프
+## 2. TSVB(Time Series Visual Builder) 그래프
 ###  TSVB 이용한 시간대 별 이벤트 개수 그래프
 All Types 드롭박스 > TSVB 선택
 
@@ -177,5 +175,6 @@ dns
 
 
 
+## 4. 통합 대시보드
+![image](https://user-images.githubusercontent.com/51702223/148719973-ca640628-88dd-4943-b831-d545484a389f.png)
 
-## 4. 통합 
