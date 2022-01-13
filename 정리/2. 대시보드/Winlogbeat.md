@@ -1,4 +1,4 @@
-# Winlogbeat 시각화(수정중)
+# Winlogbeat 시각화
 
 참고 자료
 <br> https://github.com/K-Shield-Jr/Research/issues/ <br> https://www.youtube.com/watch?v=Vv8nsG5q-Vs<br><br>
@@ -171,10 +171,18 @@ ip
 ![29](https://user-images.githubusercontent.com/59687167/139571930-a447cf36-617d-4763-a52b-dbd2b47c7a34.PNG)
 dns
 
-![31](https://user-images.githubusercontent.com/59687167/139577098-27ba43da-5131-48c9-8a0d-d0fa54433032.PNG)
+###  배치
+![image](https://user-images.githubusercontent.com/51702223/149285418-1b774542-a0e7-4f27-8bec-9f756ce00e8c.png)
+
 
 
 
 ## 4. 통합 대시보드
+
+###  호스트 별 이벤트 수
 ![image](https://user-images.githubusercontent.com/51702223/148719973-ca640628-88dd-4943-b831-d545484a389f.png)
+
+### 배치
+![image](https://user-images.githubusercontent.com/51702223/149285889-0b2dd520-f09c-430e-867b-6b938a69466b.png)
+
 
