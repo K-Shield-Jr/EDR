@@ -7,5 +7,5 @@
 
 - [X] Docker
 - [X] ELK 서버
-- [ ] Winlogbeat, Sysmon
+- [X] Winlogbeat, Sysmon
 - [X] Metricbeat
